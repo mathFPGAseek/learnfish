@@ -4,6 +4,7 @@
 % University of North Dakota 
 % EE 999 ; Professor Tavakolian
 %%---------------------------------------------------------
+<<<<<<< HEAD
 
 min      = 250;
 modeArray     = table2cell(tbl_raman);
@@ -49,6 +50,25 @@ Test     = table2cell(tbl_data);
 tic
 % Build MC data for blue Tilapia
 blueTilapiaRandomIndex = randsample(fishTypeCount,min);
+=======
+%{
+function [assembledArrayForMC] = BuildSamplesForMC(tbl_data,min,...
+                                  blueTilapiaArray,blueTilapiaCount,...
+                                  malabarSnapperArray,malabarSnapperCount,...
+                                  redSnapperArray,redSnapperCount,...
+                                  summerFlounderArray,summerFlounderCount,...
+                                  vermillionSnapperArray,vermillionSnapperCount,...
+                                  whiteBassArray,whiteBassCount)
+
+%} 
+min = 250;
+Test     = table2cell(tbl_raman);
+ArrayForMC = {};
+
+tic
+% Build MC data for blue Tilapia
+blueTilapiaRandomIndex = randsample(blueTilapiaCount,min);
+>>>>>>> 5731b35796920791182586afbdbf850083ed5ea5
 blueTilapiaRandomIndex = blueTilapiaRandomIndex';
 
 for i = 1: min
