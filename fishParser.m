@@ -127,4 +127,6 @@ tbl_data = tbl_vis;
  vermillionSnapperSampleMeas = min([fluorvermillionSnapperCount,ramanvermillionSnapperCount,swirvermillionSnapperCount,visvermillionSnapperCount]);
  whiteBassSampleMeas         = min([fluorwhiteBassCount,ramanwhiteBassCount,swirwhiteBassCount,viswhiteBassCount]);
  debug = 0;
+ 
+ 
                          
