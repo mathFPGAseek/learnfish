@@ -11,37 +11,38 @@ modeArray     = table2cell(tbl_raman);
 ArrayForMC   = {};
 
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            blueTilapiaArray,blueTilapiaCount);
+                                            ramanblueTilapiaArray,ramanblueTilapiaCount);
                                         
 ArrayForMC = assembledArrayForMC;
 
 debug = 0;
  
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            malabarSnapperArray,malabarSnapperCount);
+                                            ramanmalabarSnapperArray,ramanmalabarSnapperCount);
                                         
 ArrayForMC = assembledArrayForMC;
 
 debug = 0;
  
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            redSnapperArray,redSnapperCount);
+                                            ramanredSnapperArray,ramanredSnapperCount);
 
 ArrayForMC = assembledArrayForMC;
  
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            summerFlounderArray,summerFlounderCount);
+                                            ramansummerFlounderArray,ramansummerFlounderCount);
 
 ArrayForMC = assembledArrayForMC;
  
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            vermillionSnapperArray,vermillionSnapperCount);
+                                            ramanvermillionSnapperArray,ramanvermillionSnapperCount);
 
 ArrayForMC = assembledArrayForMC;
  
 [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
-                                            whiteBassArray,whiteBassCount);
+                                            ramanwhiteBassArray,ramanwhiteBassCount);
 
+debug = 0;
 
 function [assembledArrayForMC] = ConstructArrayForMC(modeArray,ArrayForMC,min,...
                                   fishTypeArray,fishTypeCount)
