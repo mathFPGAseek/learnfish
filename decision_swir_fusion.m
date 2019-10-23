@@ -33,7 +33,7 @@ dim_swir = samples_swir(2);
 % 10 Principal Components PCA
 % Quad SVM
 %% ----------------------------
-tic
+%tic
 SpectSwirClassifierAAvgResults        = zeros(P,M);
 SpectSwirClassifierAVarResults        = zeros(P,M);
 SpectSwirClassifierFinalAAvgResults   = zeros(1,M); 
@@ -79,7 +79,7 @@ end
         SpectSwirClassifierFinalAAvgResults(j) = mean(SpectSwirClassifierAAvgResults(:,j));
         SpectSwirClassifierFinalAVarResults(j) = mean(SpectSwirClassifierAVarResults(:,j));
     end
-toc
+%toc
 debug = 0;
 
 %% ----------------------------
@@ -87,7 +87,7 @@ debug = 0;
 % Explained variance 95%
 % Cubic SVM
 %% ----------------------------
-tic
+%tic
 SpectSwirClassifierBAvgResults        = zeros(P,M);
 SpectSwirClassifierBVarResults        = zeros(P,M);
 SpectSwirClassifierFinalBAvgResults   = zeros(1,M); 
@@ -133,7 +133,7 @@ end
         SpectSwirClassifierFinalBAvgResults(j) = mean(SpectSwirClassifierBAvgResults(:,j));
         SpectSwirClassifierFinalBVarResults(j) = mean(SpectSwirClassifierBVarResults(:,j));
     end
-toc    
+%toc    
     debug = 0;
 
 

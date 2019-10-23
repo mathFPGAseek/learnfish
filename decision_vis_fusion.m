@@ -33,7 +33,7 @@ dim_vis = samples_vis(2);
 % 10 Principal Components PCA
 % Quad SVM
 %% ----------------------------
-tic
+%tic
 SpectVisClassifierAAvgResults        = zeros(P,M);
 SpectVisClassifierAVarResults        = zeros(P,M);
 SpectVisClassifierFinalAAvgResults   = zeros(1,M); 
@@ -79,7 +79,7 @@ end
         SpectVisClassifierFinalAAvgResults(j) = mean(SpectVisClassifierAAvgResults(:,j));
         SpectVisClassifierFinalAVarResults(j) = mean(SpectVisClassifierAVarResults(:,j));
     end
-toc
+%toc
 debug = 0;
 
 %% ----------------------------
@@ -87,7 +87,7 @@ debug = 0;
 % Explained variance 95%
 % Cubic SVM
 %% ----------------------------
-tic
+%tic
 SpectVisClassifierBAvgResults        = zeros(P,M);
 SpectVisClassifierBVarResults        = zeros(P,M);
 SpectVisClassifierFinalBAvgResults   = zeros(1,M); 
@@ -133,7 +133,7 @@ end
         SpectVisClassifierFinalBAvgResults(j) = mean(SpectVisClassifierBAvgResults(:,j));
         SpectVisClassifierFinalBVarResults(j) = mean(SpectVisClassifierBVarResults(:,j));
     end
-toc    
+%toc    
     debug = 0;
 
 

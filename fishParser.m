@@ -5,7 +5,7 @@
 % EE 999 ; Professor Tavakolian
 %%---------------------------------------------------------
 debug = 0;
-tic
+%tic
 % Sort Fluorescence Count and index to fish
 tbl_data = tbl_Fluorescence;
 [ blueTilapiaCount, ...
@@ -117,7 +117,7 @@ tbl_data = tbl_vis;
  visvermillionSnapperArray  = vermillionSnapperArray;
  viswhiteBassCount          = whiteBassCount;
  viswhiteBassArray          = whiteBassArray;
- toc
+ %toc
  debug = 0;
  % Take sample measurements from fish class with min number of samples
  blueTilapiaSampleMeas       = min([fluorblueTilapiaCount,ramanblueTilapiaCount,swirblueTilapiaCount,visblueTilapiaCount]);

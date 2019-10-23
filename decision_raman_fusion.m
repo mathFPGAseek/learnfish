@@ -33,7 +33,7 @@ dim_raman = samples_raman(2);
 % 10 Principal Components PCA
 % Quad SVM
 %% ----------------------------
-tic
+%tic
 SpectRamanClassifierAAvgResults        = zeros(P,M);
 SpectRamanClassifierAVarResults        = zeros(P,M);
 SpectRamanClassifierFinalAAvgResults   = zeros(1,M); 
@@ -79,7 +79,7 @@ end
         SpectRamanClassifierFinalAAvgResults(j) = mean(SpectRamanClassifierAAvgResults(:,j));
         SpectRamanClassifierFinalAVarResults(j) = mean(SpectRamanClassifierAVarResults(:,j));
     end
-toc
+%toc
 debug = 0;
 
 %% ----------------------------
@@ -87,7 +87,7 @@ debug = 0;
 % Explained variance 95%
 % Cubic SVM
 %% ----------------------------
-tic
+%tic
 SpectRamanClassifierBAvgResults        = zeros(P,M);
 SpectRamanClassifierBVarResults        = zeros(P,M);
 SpectRamanClassifierFinalBAvgResults   = zeros(1,M); 
@@ -133,7 +133,7 @@ end
         SpectRamanClassifierFinalBAvgResults(j) = mean(SpectRamanClassifierBAvgResults(:,j));
         SpectRamanClassifierFinalBVarResults(j) = mean(SpectRamanClassifierBVarResults(:,j));
     end
-toc    
+%toc    
     debug = 0;
 
 

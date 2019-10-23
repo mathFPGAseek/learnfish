@@ -5,7 +5,7 @@
 % EE 999 ; Professor Tavakolian
 %%---------------------------------------------------------
 min           = 250;
-tic
+%tic
 %%----------------------------------------
 % Build Monte Carlo Simulation Raman Data
 %%----------------------------------------
@@ -170,7 +170,7 @@ ArrayForMC = assembledArrayForMC;
                                         
 assembledVisArrayForMC = assembledArrayForMC;
 
-toc
+%toc
 
 debug = 0;
 

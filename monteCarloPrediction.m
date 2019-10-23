@@ -5,6 +5,10 @@
 % EE 999 ; Professor Tavakolian 
 % Description: Following the Pseudo code from 
 % Suttons book: Reinforcement Learning 2nd Edition, page 92
+% So, this file will for N policies:
+% 1. Build tables 
+% 2. Genrate an episode
+% 3. Calculate Value
 %% ------------------------------------------------------------------------
 
 %------------------------------------------------------------------------
@@ -46,10 +50,33 @@
 %         V(St) <- average(Returns(St))
 %
 %------------------------------------------------------------------------
+% load data
+load('USDA_Data_Redsnapper.mat')
+
+debug = 0;
+% Build tables
+tic
+build_tables;
+toc
+
+% Generate data to see an example of time
+tic 
+generate_monte_carlo_samples;
+toc
+
+debug = 0;
+% Run an experiment as an example of time
+% ??? We need to build expereiment module
 
 %------------------------
 % Run Policy A
 %------------------------
+
+% Init 
+
+% Set Policy A
+
+% Run Policy A
 
 
 

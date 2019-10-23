@@ -33,7 +33,7 @@ dim_fluorescence = samples_fluorescence(2);
 % 10 Principal Components PCA
 % Quad SVM
 %% ----------------------------
-tic
+%tic
 SpectFluorClassifierAAvgResults        = zeros(P,M);
 SpectFluorClassifierAVarResults        = zeros(P,M);
 SpectFluorClassifierFinalAAvgResults   = zeros(1,M); 
@@ -79,7 +79,7 @@ end
         SpectFluorClassifierFinalAAvgResults(j) = mean(SpectFluorClassifierAAvgResults(:,j));
         SpectFluorClassifierFinalAVarResults(j) = mean(SpectFluorClassifierAVarResults(:,j));
     end
-toc
+%toc
 debug = 0;
 
 %% ----------------------------
@@ -87,7 +87,7 @@ debug = 0;
 % Explained variance 95%
 % Cubic SVM
 %% ----------------------------
-tic
+%tic
 SpectFluorClassifierBAvgResults        = zeros(P,M);
 SpectFluorClassifierBVarResults        = zeros(P,M);
 SpectFluorClassifierFinalBAvgResults   = zeros(1,M); 
@@ -133,7 +133,7 @@ end
         SpectFluorClassifierFinalBAvgResults(j) = mean(SpectFluorClassifierBAvgResults(:,j));
         SpectFluorClassifierFinalBVarResults(j) = mean(SpectFluorClassifierBVarResults(:,j));
     end
-toc    
+%toc    
     debug = 0;
 
 
