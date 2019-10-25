@@ -66,7 +66,11 @@ toc
 
 debug = 0;
 % Run an experiment as an example of time
-% ??? We need to build expereiment module
+tic
+runExperiments;
+toc
+
+debug = 0;
 
 %------------------------
 % Run Policy A
