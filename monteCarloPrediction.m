@@ -77,7 +77,8 @@ debug = 0;
 
 % Init for all policies
 % An (8- Policies) x (6-classes) matrix
-V = zeros(Policies,classes); % Value
+V = zeros(Policies,classes); % Value to be used with calculation
+Vtot = zeros(Policies,classes); % Total value for state
 R = zeros(Policies,classes); % Return
 
 % Later!!! We will make multiple episodes
@@ -91,6 +92,15 @@ R = zeros(Policies,classes); % Return
 tic 
 buildAllDecisionAppliedPolicyMatrix;
 toc
+
+tic
+calculateRewards
+toc
+
+% Update Vtot
+debug = 0;
+% generate new episode up to N episodes!
+
 
 
 
