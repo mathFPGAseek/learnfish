@@ -50,6 +50,9 @@
 %         V(St) <- average(Returns(St))
 %
 %------------------------------------------------------------------------
+% parameters: 
+Policies = 8;
+classes  = 6;
 % load data
 load('USDA_Data_Redsnapper.mat')
 
@@ -72,15 +75,24 @@ toc
 
 debug = 0;
 
+% Init for all policies
+% An (8- Policies) x (6-classes) matrix
+V = zeros(Policies,classes); % Value
+R = zeros(Policies,classes); % Return
+
+% Later!!! We will make multiple episodes
+
 %------------------------
 % Run Policy A
 %------------------------
+% Input Policy A
+% Policy A is just final avgs for each sensor/classifier 
+% Make this possibly a function later
+tic 
+buildAllDecisionAppliedPolicyMatrix;
+toc
 
-% Init 
 
-% Set Policy A
-
-% Run Policy A
 
 
 
