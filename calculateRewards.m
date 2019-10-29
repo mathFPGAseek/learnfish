@@ -4,10 +4,10 @@
 % University of North Dakota 
 % EE 999 ; Professor Tavakolian 
 %% ------------------------------------------------------------------------
-TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
+%TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
 %TotalNumClasses = 6;
-gamma = .9; % discount rate
-Policy = 1;
+%gamma = .9; % discount rate
+%Policy = 1;
 
 AccumLearnArray = SimpleValue.empty(1,0);
 

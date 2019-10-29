@@ -1,5 +1,6 @@
 function[AppliedPolicyMatrix] = buildDecisionAppliedPolicyMatrix(ExpData,...
-                                ClassifierFinalAAvg,ClassifierFinalAVar,Policy)
+                                ClassifierFinalAAvg,ClassifierFinalAVar,Policy,...
+                                AvgOnlyFlag)
                                  
 %% ------------------------------------------------------------------------
 % filename: buildDecisionAppliedPolicyMatrix.m
@@ -15,7 +16,13 @@ debug = 0;
 
 % Apply Policy A 
 % Pass -thru ; No adjustment
-SpectClassifierFinalAAvgResults = ClassifierFinalAAvg .* Policy;
+if AvgOnlyFlag == 1
+  SpectClassifierFinalAAvgResults = ClassifierFinalAAvg .* Policy;
+else
+  SpectClassifierFinalAAvgResultsTemp =  ClassifierFinalAAvg .* Policy;
+  SpectClassifierFinalAAvgResults     =  SpectClassifierFinalAAvgResultsTemp - ...
+                                         ClassifierFinalAVar; 
+end
 
 % Construct w/ Policy Applied
 concatAppliedPolicyArray  = SimpleValue.empty(1,0); % Type simple Class

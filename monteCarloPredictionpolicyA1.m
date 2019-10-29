@@ -1,5 +1,5 @@
 %% ------------------------------------------------------------------------
-% filename: monteCarloPrediction.m
+% filename: monteCarloPredictionA1.m
 % rbd 10/14/19
 % University of North Dakota 
 % EE 999 ; Professor Tavakolian 
@@ -39,16 +39,25 @@
 %      Append G to Return(St)
 %      V(St) <- average(Returns(St))
 %------------------------------------------------------------------------
-% parameters: 
+% parameters:
+episodes = 10;
 Policies = 8;
 classes  = 6;
+
+% For calc rewards
+TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
+%TotalNumClasses = 6;
+gamma = .9; % discount rate
+Policy = 1;
+
 % load data
 load('USDA_Data_Redsnapper.mat')
 
 %% Init for all policies
 % An (8- Policies) x (6-classes) matrix
-V = zeros(episodes,Policies,classes); % Value to be used with calculation
-R = zeros(Policies,classes); % Return
+VT = zeros(episodes,Policies,classes);
+V  = zeros(Policies,classes); % Value to be used with calculation
+R  = zeros(Policies,classes); % Return
 
 % Build tables
 tic
@@ -56,7 +65,7 @@ build_tables;
 toc
 
 %% Loop for N episodes
-
+for Loop = 1 : episodes
     % Generate data to see an example of time
     tic 
     generate_monte_carlo_samples;
@@ -70,23 +79,28 @@ toc
 
     debug = 0;
 
-%------------------------
-% Run Policy A
-%------------------------
-% Input Policy A
-% Policy A is just final avgs for each sensor/classifier 
-% Make this possibly a function later
-tic 
-buildAllDecisionAppliedPolicyMatrix;
-toc
+    %------------------------
+    % Run Policy A1
+    %------------------------
+    policyA = [ 1 1 1 1 1 1]; % Policy A not realted to classifier A!
+    AvgOnlyFlag = 1;
 
-tic
-calculateRewards
-toc
+    tic 
+    buildAllDecisionAppliedPolicyMatrix;
+    toc
 
-% Update Vtot
+    tic
+    calculateRewards
+    toc
+    
+    % Update Value for Episode
+    VT(episodes,:,:) = V;
+    
+    debug = 0;
+
+end
 debug = 0;
-% generate new episode up to N episodes!
+
 
 
 
