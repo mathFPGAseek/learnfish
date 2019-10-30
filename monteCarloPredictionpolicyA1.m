@@ -93,6 +93,8 @@ for Loop = 1 : episodes
     calculateRewards
     toc
     
+    debug = 0;
+    
     % Update Value for Episode
     VT(episodes,:,:) = V;
     
