@@ -41,7 +41,7 @@
 %------------------------------------------------------------------------
 % parameters:
 episodes = 10;
-Policies = 8;
+Policies = 5;
 classes  = 6;
 
 % For calc rewards
@@ -55,7 +55,7 @@ load('USDA_Data_Redsnapper.mat')
 
 %% Init for all policies
 % An (8- Policies) x (6-classes) matrix
-VT = zeros(episodes,Policies,classes);
+VT = zeros(Policies,classes,episodes);
 V  = zeros(Policies,classes); % Value to be used with calculation
 R  = zeros(Policies,classes); % Return
 
@@ -96,7 +96,7 @@ for Loop = 1 : episodes
     debug = 0;
     
     % Update Value for Episode
-    VT(episodes,:,:) = V;
+    VT(:,:,Loop) = V;
     
     debug = 0;
 

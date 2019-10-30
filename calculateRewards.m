@@ -58,6 +58,8 @@ upperIndex = min; % This we get from how much data we have of each fish
 fishState = 0;
 gain = 0;
 count = 0;
+extraReward  = 0;
+nonZeroElement = 0;
 misses = zeros(1,classes);
 for fishState = 1 : classes 
     for j = lowerIndex : upperIndex
@@ -66,12 +68,32 @@ for fishState = 1 : classes
         accumValue = rowValue.Value; % Simple Value class
         [M I] = max(accumValue);
         if ( I ~= fishState)
-            reward = -1;
+            reward = -1; % penalty for mismatch
             misses(fishState) = misses(fishState) + 1;
         else
-            reward = 1;
+            reward = 1; % reward for match
+            anyNonZero = all(accumValue,1);
+            for k = 1 : classes
+                if ( anyNonZero(k)== true)
+                    if k == I
+                        doNothing = 0;
+                    else
+                        nonZeroElement  = nonZeroElement +1;
+                    end
+                end
+            end
+            if nonZeroElement >= 1
+                extraReward = 0;
+            else
+                extraReward = 1;
+            end
+              
         end 
-        gain = gamma*gain + reward;
+        
+        totalReward = reward + extraReward;
+        extraReward = 0;
+        nonZeroElement = 0;
+        gain = gamma*gain + totalReward;
         R(Policy,fishState) = R(Policy,fishState) + gain;
         V(Policy,fishState) = R(Policy,fishState)/(count);
     end
@@ -79,6 +101,7 @@ for fishState = 1 : classes
     upperIndex = min*(fishState+1);
     count = 0;
     gain = 0;
+    debug = 0;
 end
 
 debug = 0;
