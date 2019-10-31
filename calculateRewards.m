@@ -54,13 +54,16 @@ debug = 0;
 % of our array.
 stateSteps = TotalSamplesLearnFish/classes;
 lowerIndex = 1;
-upperIndex = min; % This we get from how much data we have of each fish
+upperIndex = minSampleMeas; % This we get from how much data we have of each fish
 fishState = 0;
 gain = 0;
 count = 0;
 extraReward  = 0;
 nonZeroElement = 0;
+totalReward = 0;
 misses = zeros(1,classes);
+V  = zeros(Policies,classes); % Value to be used with calculation
+R  = zeros(Policies,classes); % Return
 for fishState = 1 : classes 
     for j = lowerIndex : upperIndex
         count = count + 1; % Use to average values for state
@@ -98,7 +101,7 @@ for fishState = 1 : classes
         V(Policy,fishState) = R(Policy,fishState)/(count);
     end
     lowerIndex = upperIndex + 1;
-    upperIndex = min*(fishState+1);
+    upperIndex = minSampleMeas*(fishState+1);
     count = 0;
     gain = 0;
     debug = 0;

@@ -128,5 +128,9 @@ tbl_data = tbl_vis;
  whiteBassSampleMeas         = min([fluorwhiteBassCount,ramanwhiteBassCount,swirwhiteBassCount,viswhiteBassCount]);
  debug = 0;
  
- 
+ minSampleMeas = min([blueTilapiaSampleMeas,malabarSnapperSampleMeas,...
+                      redSnapperSampleMeas,summerFlounderSampleMeas,...
+                      vermillionSnapperSampleMeas,whiteBassSampleMeas]);
+                      
+                      
                          
