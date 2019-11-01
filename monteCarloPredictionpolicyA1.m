@@ -39,30 +39,13 @@
 %      Append G to Return(St)
 %      V(St) <- average(Returns(St))
 %------------------------------------------------------------------------
-% parameters:
-episodes = 10;
-Policies = 5;
-classes  = 6;
 
-% For calc rewards
-TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
-%TotalNumClasses = 6;
-gamma = .9; % discount rate
 Policy = 1;
-
-% load data
-load('USDA_Data_Redsnapper.mat')
 
 %% Init for all policies
 % An (8- Policies) x (6-classes) matrix
-VT = zeros(Policies,classes,episodes);
 V  = zeros(Policies,classes); % Value to be used with calculation
 R  = zeros(Policies,classes); % Return
-
-% Build tables
-tic
-build_tables;
-toc
 
 %% Loop for N episodes
 for Loop = 1 : episodes
