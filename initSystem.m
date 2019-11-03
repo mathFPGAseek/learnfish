@@ -8,8 +8,11 @@
 
 % parameters:
 episodes = 10;
-Policies = 5;
-classes  = 6;
+Policies = 5; % { A1-nominal, B1-Best Avg, C1-Best Avg(Aggresive),
+              %   D1-Best Variance , E1- Best Variance(Aggresive)}
+classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...
+              % Summer Flounder, Vermillion Snapper,White Bass}
+sensors  = 4; % {Fluor,Raman, SWIR, Vis}
 
 % For calc rewards
 TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
