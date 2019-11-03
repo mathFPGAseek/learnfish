@@ -227,6 +227,16 @@ fluorClassBPolicyB2 = fusionPolicyB2WeightingClassifierB(1,:);
 ramanClassBPolicyB2 = fusionPolicyB2WeightingClassifierB(2,:);
 SWIRClassBPolicyB2  = fusionPolicyB2WeightingClassifierB(3,:);
 VisClassBPolicyB2   = fusionPolicyB2WeightingClassifierB(4,:);
+
+% 
+fluorPolicyA = fluorClassAPolicyB1;
+fluorPolicyB = fluorClassBPolicyB1;
+ramanPolicyA = ramanClassAPolicyB1;
+ramanPolicyB = ramanClassBPolicyB1;
+SWIRPolicyA  = SWIRClassAPolicyB1;
+SWIRPolicyB  = SWIRClassBPolicyB1;
+VisPolicyA   = VisClassAPolicyB1;
+VisPolicyB   = VisClassBPolicyB1;
         
                                
 debug = 0;

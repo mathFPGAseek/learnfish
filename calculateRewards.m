@@ -97,8 +97,8 @@ for fishState = 1 : classes
         extraReward = 0;
         nonZeroElement = 0;
         gain = gamma*gain + totalReward;
-        R(Policy,fishState) = R(Policy,fishState) + gain;
-        V(Policy,fishState) = R(Policy,fishState)/(count);
+        R(PolicyNum,fishState) = R(PolicyNum,fishState) + gain;
+        V(PolicyNum,fishState) = R(PolicyNum,fishState)/(count);
     end
     lowerIndex = upperIndex + 1;
     upperIndex = minSampleMeas*(fishState+1);

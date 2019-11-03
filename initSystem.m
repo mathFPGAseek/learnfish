@@ -24,6 +24,7 @@ load('USDA_Data_Redsnapper.mat')
 
 %% Init for all policies
 % An (8- Policies) x (6-classes) matrix
+VF = zeros(Policies,classes,episodes);
 VT = zeros(Policies,classes,episodes);
 V  = zeros(Policies,classes); % Value to be used with calculation
 R  = zeros(Policies,classes); % Return

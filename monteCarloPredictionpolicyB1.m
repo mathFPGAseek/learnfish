@@ -40,7 +40,11 @@
 %      V(St) <- average(Returns(St))
 %------------------------------------------------------------------------
 
-Policy = 2;
+PolicyNum = 2;
+
+% Adjust weight w/ Policy B
+findAdjustWeightingPolicyB;
+AvgOnlyFlag = 1;
 
 %% Init for all policies
 % An (8- Policies) x (6-classes) matrix
@@ -63,10 +67,11 @@ for Loop = 1 : episodes
     debug = 0;
 
     %------------------------
-    % Run Policy A1
+    % Run Policy B1
     %------------------------
-    policyA = [ 1 1 1 1 1 1]; % Policy A not realted to classifier A!
-    AvgOnlyFlag = 1;
+    %policyA = [ 1 1 1 1 1 1]; % Policy A not realted to classifier A!
+    
+    %AvgOnlyFlag = 1;
 
     tic 
     buildAllDecisionAppliedPolicyMatrix;
