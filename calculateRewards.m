@@ -12,8 +12,9 @@
 
 AccumLearnArray = SimpleValue.empty(1,0);
 
+localSize = minSampleMeas * classes; 
 % Construct Row Summation from all sensors/classifiers
-for i = 1: TotalSamplesLearnFish
+for i = 1: localSize
     
     rowLearnFluorA = AppliedPolicyMatrixFluorA(i); 
     rowLearnFluorAvalue = rowLearnFluorA.Value;
@@ -53,7 +54,7 @@ end
 debug = 0;
 % Hand out rewards to all rows that chose correctly. knowing the structure
 % of our array.
-stateSteps = TotalSamplesLearnFish/classes;
+%stateSteps = TotalSamplesLearnFish/classes;
 lowerIndex = 1;
 upperIndex = minSampleMeas; % This we get from how much data we have of each fish
 fishState = 0;

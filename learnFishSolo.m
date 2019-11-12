@@ -8,7 +8,7 @@
 %% ------------------------------------------------------------------------
  randomRuns = 10;   % Number of random runs for a train
  M = classes;   % Types of Fish to classify
- N = 200; % sample random size
+ N = TrainSize; % sample random size
  
 samples_fluorescence = size(tbl_Fluorescence);
 num_meas_fluorescence = samples_fluorescence(1);

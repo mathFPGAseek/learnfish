@@ -23,7 +23,7 @@
 L = 2;   % Number of Classifiers
 randomRuns = 10;   % Number of random runs for a train
 M = 6;   % Types of Fish to classify
-N = 200; % sample random size
+N = TrainSize; % sample random size
 P = 4;   % Number of Trains
 samples_fluorescence = size(tbl_Fluorescence);
 num_meas_fluorescence = samples_fluorescence(1);

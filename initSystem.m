@@ -15,7 +15,8 @@ classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...
 sensors  = 4; % {Fluor,Raman, SWIR, Vis}
 
 % For calc rewards
-TotalSamplesLearnFish = 1500; % Parametrize or make part of a funciton later!
+TotalSamplesLearnFish = 0; % Parametrize or make part of a funciton later!
+TrainSize = 50;
 %TotalNumClasses = 6;
 gamma = .9; % discount rate
 

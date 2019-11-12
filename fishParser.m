@@ -130,7 +130,7 @@ tbl_data = tbl_vis;
  
  minSampleMeas = min([blueTilapiaSampleMeas,malabarSnapperSampleMeas,...
                       redSnapperSampleMeas,summerFlounderSampleMeas,...
-                      vermillionSnapperSampleMeas,whiteBassSampleMeas]);
+                      vermillionSnapperSampleMeas,whiteBassSampleMeas,TrainSize]);
                       
                       
                          
