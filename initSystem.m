@@ -16,7 +16,7 @@ sensors  = 4; % {Fluor,Raman, SWIR, Vis}
 
 % For calc rewards
 TotalSamplesLearnFish = 0; % Parametrize or make part of a funciton later!
-TrainSize = 50;
+TrainSize = 175;
 %TotalNumClasses = 6;
 gamma = .9; % discount rate
 
