@@ -13,6 +13,7 @@ Policies = 5; % { A1-nominal, B1-Best Avg, C1-Best Avg(Aggresive),
 classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...
               % Summer Flounder, Vermillion Snapper,White Bass}
 sensors  = 4; % {Fluor,Raman, SWIR, Vis}
+sensor_array = '1111';
 
 % For calc rewards
 TotalSamplesLearnFish = 0; % Parametrize or make part of a funciton later!
