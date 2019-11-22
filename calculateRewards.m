@@ -40,10 +40,40 @@ for i = 1: localSize
     rowLearnVisB = AppliedPolicyMatrixVisB(i); 
     rowLearnVisBvalue = rowLearnVisB.Value;
     
-    AccumLearnrow = rowLearnFluorAvalue + rowLearnFluorBvalue + ...
-                      rowLearnRamanAvalue + rowLearnRamanBvalue + ...
-                      rowLearnSWIRAvalue + rowLearnSWIRBvalue + ...
-                      rowLearnVisAvalue + rowLearnVisBvalue;
+    f_r_s_v    = '1111';
+    f_r_s      = '1110';
+    r_s_v      = '0111';
+    f_r        = '1100';
+    r_s        = '0110';
+    
+ 
+    switch sensor_array
+        case f_r_s_v           
+          AccumLearnrow = rowLearnFluorAvalue + rowLearnFluorBvalue + ...
+                          rowLearnRamanAvalue + rowLearnRamanBvalue + ...
+                          rowLearnSWIRAvalue + rowLearnSWIRBvalue + ...
+                          rowLearnVisAvalue + rowLearnVisBvalue;
+            
+        case f_r_s
+          AccumLearnrow = rowLearnFluorAvalue + rowLearnFluorBvalue + ...
+                          rowLearnRamanAvalue + rowLearnRamanBvalue + ...
+                          rowLearnSWIRAvalue + rowLearnSWIRBvalue;
+            
+            
+        case r_s_v
+          AccumLearnrow = rowLearnRamanAvalue + rowLearnRamanBvalue + ...
+                          rowLearnSWIRAvalue + rowLearnSWIRBvalue + ...
+                          rowLearnVisAvalue + rowLearnVisBvalue;
+            
+        case f_r
+          AccumLearnrow = rowLearnFluorAvalue + rowLearnFluorBvalue + ...
+                          rowLearnRamanAvalue + rowLearnRamanBvalue; 
+            
+        case r_s
+          AccumLearnrow = rowLearnRamanAvalue + rowLearnRamanBvalue + ...
+                          rowLearnSWIRAvalue + rowLearnSWIRBvalue; 
+    end      
+
                   
     AccumLearnArray = [ AccumLearnArray,AccumLearnrow];
     
