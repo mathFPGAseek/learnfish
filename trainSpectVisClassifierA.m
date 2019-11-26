@@ -1,4 +1,4 @@
-function [trainedSpectVisClassifierA, validationAccuracy] = trainSpectVisClassifierA(trainingData)
+function [trainedSpectVisClassifierA, validationAccuracy] = trainSpectVisClassifierA(trainingData,KFolds)
 % [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
 % returns a trained classifier and its accuracy. This code recreates the
 % classification model trained in Classification Learner app. Use the
@@ -102,7 +102,7 @@ response = inputTable.DNA;
 isCategoricalPredictor = [true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
 % Perform cross-validation
-KFolds = 5;
+%KFolds = 5;
 cvp = cvpartition(response, 'KFold', KFolds);
 % Initialize the predictions to the proper sizes
 validationPredictions = response;

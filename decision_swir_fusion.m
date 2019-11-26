@@ -50,7 +50,7 @@ for i = 1 : P
     % Step 2: Train Classifier 
     %% ----------------------------
     %[trainedClassifier, validationAccuracy] = trainSpectFluorClassifierA(trainingData);
-    [trainedSpectSwirClassifierA, validationAccuracy] = trainSpectSwirClassifierA(trainingData);
+    [trainedSpectSwirClassifierA, validationAccuracy] = trainSpectSwirClassifierA(trainingData,KFolds);
     debug = 0;
 
     %% ----------------------------
@@ -104,7 +104,7 @@ for i = 1 : P
     % Step 2: Train Classifier 
     %% ----------------------------
     %[trainedClassifier, validationAccuracy] = trainSpectFluorClassifierA(trainingData);
-    [trainedSpectSwirClassifierB, validationAccuracy] = trainSpectSwirClassifierB(trainingData);
+    [trainedSpectSwirClassifierB, validationAccuracy] = trainSpectSwirClassifierB(trainingData,KFolds);
     debug = 0;
 
     %% ----------------------------

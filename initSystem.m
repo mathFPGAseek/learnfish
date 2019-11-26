@@ -7,11 +7,12 @@
 %% ------------------------------------------------------------------------
 
 % parameters:
-episodes = 10;
+episodes = 3;
 Policies = 5; % { A1-nominal, B1-Best Avg, C1-Best Avg(Aggresive),
               %   D1-Best Variance , E1- Best Variance(Aggresive)}
 classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...
               % Summer Flounder, Vermillion Snapper,White Bass}
+KFolds = 2;
 sensors  = 4; % {Fluor,Raman, SWIR, Vis}
 sensor_array = '1111';
 
