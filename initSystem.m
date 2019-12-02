@@ -7,7 +7,8 @@
 %% ------------------------------------------------------------------------
 
 % parameters:
-episodes = 3;
+episodes = 3; % Episodes for training policy
+episodesLearnFishFusion = 10;
 Policies = 5; % { A1-nominal, B1-Best Avg, C1-Best Avg(Aggresive),
               %   D1-Best Variance , E1- Best Variance(Aggresive)}
 classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...

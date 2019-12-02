@@ -42,7 +42,7 @@ AvgOnlyFlag = 1;
 
 totalMisses = zeros(1,classes);
 %% Loop for N episodes
-for Loop = 1 : episodes
+for Loop = 1 : episodesLearnFishFusion
     % Generate data to see an example of time
     tic 
     generate_monte_carlo_samples;
