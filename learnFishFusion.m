@@ -46,23 +46,23 @@ for Loop = 1 : episodesLearnFishFusion
     % Generate data to see an example of time
     tic 
     generate_monte_carlo_samples;
-    toc
+    %toc
 
     debug = 0;
     % Run an experiment as an example of time
-    tic
+    %tic
     runExperiments;
-    toc
+    %toc
 
     debug = 0;
 
 
-    tic 
+    %tic 
     buildAllDecisionAppliedPolicyMatrix;
-    toc
+    %toc
 
    
-    tic
+    %tic
     calculateRewards
     toc
     
@@ -72,6 +72,8 @@ for Loop = 1 : episodesLearnFishFusion
     totalMisses = totalMisses + misses;
     
     debug = 0;
+    printStr = sprintf('The Loop count is: %d',Loop);
+    disp(printStr);
 
 
 end
