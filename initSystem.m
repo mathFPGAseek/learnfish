@@ -8,7 +8,7 @@
 
 % parameters:
 episodes = 3; % Episodes for training policy
-episodesLearnFishFusion = 10;
+episodesLearnFishFusion = 100;
 Policies = 5; % { A1-nominal, B1-Best Avg, C1-Best Avg(Aggresive),
               %   D1-Best Variance , E1- Best Variance(Aggresive)}
 classes  = 6; % {Blue Tilapia,Malabar Snapper,Red Snapper,...
@@ -19,7 +19,7 @@ sensor_array = '1111';
 
 % For calc rewards
 TotalSamplesLearnFish = 0; % Parametrize or make part of a funciton later!
-TrainSize = 175;
+TrainSize = 150;
 %TotalNumClasses = 6;
 gamma = .9; % discount rate
 
